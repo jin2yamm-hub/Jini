@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "SF Pro", system-ui, "Apple SD Gothic Neo", "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
+    letter-spacing: -0.02em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    background-color: #F4EFE9;
+    color: #302B28;
+  }
+
+  body {
+    line-height: 1.65;
+    background-color: #F4EFE9;
+    color: #302B28;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    color: #302B28;
+    word-break: keep-all;
+  }
+
+  p, li, span, div {
+    word-break: keep-all;
+  }
+}
+
+/* Swiss Editorial Hairlines & Grid Utilities */
+.hairline-b {
+  border-bottom: 1px solid #DDD0C5;
+}
+
+.hairline-t {
+  border-top: 1px solid #DDD0C5;
+}
+
+.hairline-x {
+  border-left: 1px solid #DDD0C5;
+  border-right: 1px solid #DDD0C5;
+}
+
+/* Custom Clean Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFE9;
+}
+::-webkit-scrollbar-thumb {
+  background: #DDD0C5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A66C57;
+}
+
+/* Typing cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  display: inline-block;
+  margin-left: 3px;
+  width: 2px;
+  background-color: #A66C57;
+  animation: blink 0.8s infinite;
+}
+
+/* Mouse wheel bounce */
+@keyframes mouseWheel {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+}
+
+.animate-mouse-wheel {
+  animation: mouseWheel 1.6s ease-in-out infinite;
+}
